@@ -1089,7 +1089,7 @@ timerhour() {
     echo -e '1. \033[93mSimple UDP \033[0m'
     echo -e '2. \033[96mKCP + UDP\033[0m'
 	echo -e '3. \033[92mQuic + UDP\033[0m'
-    echo -e '0. \033[34mBack to previous menu \033[0m'
+    echo -e '0. \033[34mBack to previous  \033[0m'
     echo -e "\033[93m───────────────────────────────────────\033[0m"
 
     while true; do
@@ -1708,7 +1708,7 @@ function configure_frp() {
 clear
     echo $'\e[0m'
     echo $'\e[92m)\e[0m'
-    echo $'\e[93mFRP Tunnel Menu\e[0m'
+    echo $'\e[93mFRP Tunnel \e[0m'
     echo $'\e[93m═════════════════════\e[0m'
   display_notification $'\e[93mStarting FRP Wireguard tunnel...\e[0m'
  printf "\e[93m╭───────────────────────────────────────╮\e[0m\n"
@@ -1720,7 +1720,7 @@ read -e -p $'\e[38;5;205mEnter your choice Please: \e[0m' server_type
 clear
     echo $'\e[92m ^ ^\e[0m'
     echo $'\e[92m(\e[91mO,O\e[92m)\e[0m'
-    echo $'\e[92m(   ) \e[93mKharej Menu\e[0m'
+    echo $'\e[92m(   ) \e[93mKharej \e[0m'
     echo $'\e[92m "-"\e[93m═════════════════════\e[0m'
 if [[ $server_type == "1" ]]; then
  printf "\e[93m╭───────────────────────────────────────╮\e[0m\n"
@@ -1808,7 +1808,7 @@ WantedBy=multi-user.target" | sudo tee /etc/systemd/system/ipmartfrpc.service &>
   clear
       echo $'\e[92m ^ ^\e[0m'
     echo $'\e[92m(\e[91mO,O\e[92m)\e[0m'
-    echo $'\e[92m(   ) \e[93mIran Menu\e[0m'
+    echo $'\e[92m(   ) \e[93mIran \e[0m'
     echo $'\e[92m "-"\e[93m═════════════════════\e[0m'
     # Iran configuration
      printf "\e[93m╭───────────────────────────────────────────────╮\e[0m\n"
@@ -1873,7 +1873,7 @@ function multi_port() {
   clear
 	  echo $'\e[0m'
       echo $'\e[92m)\e[0m'
-      echo $'\e[93mFRP Multi Menu\e[0m'
+      echo $'\e[93mFRP Multi \e[0m'
       echo $'\e[93m══════════════════════════\e[0m'
       echo ""
        printf "\e[93m╭───────────────────────────────────────╮\e[0m\n"
@@ -1886,25 +1886,25 @@ function multi_port() {
 
     case $choice in
         1)
-            kharej_tunnel_menu
+            kharej_tunnel_
             ;;
         2)
-            iran_tunnel_menu
+            iran_tunnel_
             ;;
         3)
             clear
-            main_menu
+            main_
             ;;
         *)
             echo "Invalid choice."
             ;;
  esac
 }
-function kharej_tunnel_menu() {
+function kharej_tunnel_() {
   clear
 	  echo $'\e[0m'
       echo $'\e[0m'
-      echo $'\e[93mKharej Multi Menu\e[0m'
+      echo $'\e[93mKharej Multi \e[0m'
       echo $'\e[93m══════════════════════════\e[0m'
       echo ""
       printf "\e[93m──────────────────────────────────────────────────\e[0m\n"
@@ -1983,11 +1983,11 @@ echo "Reloading daemon..." > /dev/null 2>&1
     res_lk
     display_checkmark $'\e[92mFRP Service started.\e[0m'
 }
-function iran_tunnel_menu() {
+function iran_tunnel_() {
   clear
 	  echo $'\e[0m'
       echo $'\e[0m'
-      echo $'\e[93mIran Multi Menu\e[0m'
+      echo $'\e[93mIran Multi \e[0m'
       echo $'\e[93m══════════════════════════\e[0m'
       echo ""
     printf "\e[93m──────────────────────────────────────────────────\e[0m\n"
@@ -2061,7 +2061,7 @@ function uni() {
   clear
 	  echo $'\e[0m'
       echo $'\e[0m'
-      echo $'\e[93mUninstallation Menu\e[0m'
+      echo $'\e[93mUninstallation \e[0m'
       echo $'\e[93m══════════════════════════\e[0m'
       echo ""
        printf "\e[93m╭───────────────────────────────────────╮\e[0m\n"
@@ -2075,24 +2075,24 @@ function uni() {
 
     case $choice in
         1)
-            u_menu
+            u_
             ;;
         2)
-            k_menu
+            k_
             ;;
 		3)
-            q_menu
+            q_
             ;;
         4)
             clear
-            main_menu
+            main_
             ;;
         *)
             echo "Invalid choice."
             ;;
  esac
 }
-q_menu() {
+q_() {
   deleteCron5
   deleteCron6
   deleteCron11
@@ -2122,7 +2122,7 @@ q_menu() {
    # Complete msg
   display_checkmark $'\e[92mFRP service has been uninstalled successfully!\e[0m'
 }
-k_menu() {
+k_() {
   deleteCron3
   deleteCron4
   deleteCron9
@@ -2153,7 +2153,7 @@ k_menu() {
    # Complete msg
   display_checkmark $'\e[92mFRP service has been uninstalled successfully!\e[0m'
 }
-u_menu() {
+u_() {
   deleteCron1
   deleteCron2
   deleteCron7
@@ -2184,11 +2184,11 @@ u_menu() {
    # Complete msg
   display_checkmark $'\e[92mFRP service has been uninstalled successfully!\e[0m'
 }
-status_menu() {
+status_() {
     clear
     echo -e '\033[0m'
     echo -e '\033[0m'
-    echo -e '\033[93mStatus Menu\033[0m'
+    echo -e '\033[93mStatus \033[0m'
     echo -e '\033[93m══════════════════════════\033[0m'
     echo -e "\033[93m╭───────────────────────────────────────╮\033[0m"
     echo -e '\033[93mChoose what to do:\033[0m'
@@ -2202,20 +2202,20 @@ status_menu() {
         read -p $'\033[38;5;205mEnter your choice Please: \033[0m' server_type
         case "$server_type" in
             1)
-                status1_menu
+                status1_
                 break
                 ;;
             2)
-                statuskcp_menu
+                statuskcp_
                 break
                 ;;
             3)
-                statusquic_menu
+                statusquic_
                 break
                 ;;
             0)
                 clear
-                main_menu
+                main_
                 break
                 ;;
             *)
@@ -2225,11 +2225,11 @@ status_menu() {
     done
 }
 
-statusquic_menu() {
+statusquic_() {
     clear
     echo -e '\033[0m'
     echo -e '\033[0m'
-    echo -e '\033[93mStatus Menu\033[0m'
+    echo -e '\033[93mStatus \033[0m'
     echo -e '\033[93m══════════════════════════\033[0m'
 
     declare -A services=(
@@ -2264,11 +2264,11 @@ statusquic_menu() {
     echo -e "\033[93m╚════════════════════════════════════════════╝\033[0m"
 }
 
-statuskcp_menu() {
+statuskcp_() {
     clear
     echo -e '\033[0m'
     echo -e '\033[0m'
-    echo -e '\033[93mStatus Menu\033[0m'
+    echo -e '\033[93mStatus \033[0m'
     echo -e '\033[93m══════════════════════════\033[0m'
 
     declare -A services=(
@@ -2302,11 +2302,11 @@ statuskcp_menu() {
 
     echo -e "\033[93m╚════════════════════════════════════════════╝\033[0m"
 }
-status1_menu() {
+status1_() {
     clear
     echo -e '\033[92m ^ ^\033[0m'
     echo -e '\033[92m(\033[91mO,O\033[92m)\033[0m'
-    echo -e '\033[92m(   ) \033[93mStatus Menu\033[0m'
+    echo -e '\033[92m(   ) \033[93mStatus \033[0m'
     echo -e '\033[92m "-"\033[93m══════════════════════════\033[0m'
 
     declare -A services=(
@@ -2761,7 +2761,7 @@ function main_menu() {
   # Print the logo
   display_logo
   echo -e "\e[93m╔════════════════════════════════════════════════════════════════╗\e[0m"  
-  echo -e "\e[93m║                       \e[95m         Menu\e[93m                          ║\e[0m"   
+  echo -e "\e[93m║                       \e[95m         Menu\e[93m                             ║\e[0m"   
   echo -e "\e[93m╠════════════════════════════════════════════════════════════════╣\e[0m" 
   echo -e "\e[37m0. \e[96mStatus"
   echo -e "\e[37m1. \e[96mInstall FRP"
