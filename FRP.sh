@@ -1797,7 +1797,7 @@ LimitNOFILE=1048576
 [Install]
 WantedBy=multi-user.target" | sudo tee /etc/systemd/system/ipmartfrpc.service &>/dev/null
 
-    display_checkmark $'\e[92mKharej Wireguard Tunnel has been completed successfully!\e[0m \e[91mYours Truly, Azumi\e[0m'
+    display_checkmark $'\e[92mKharej Wireguard Tunnel has been completed successfully!\e[0m \e[91mYours Truly, iPmartNetwork\e[0m'
       # additional commands for Kharej side
     sudo systemctl daemon-reload
     sudo systemctl enable ipmartfrpc
@@ -1855,7 +1855,7 @@ LimitNOFILE=1048576
 [Install]
 WantedBy=multi-user.target" | sudo tee /etc/systemd/system/ipmartfrps.service &>/dev/null
 
-    display_checkmark $'\e[92mIran Wireguard Tunnel has been completed successfully!\e[0m \e[91mYours Truly, Azumi\e[0m'
+    display_checkmark $'\e[92mIran Wireguard Tunnel has been completed successfully!\e[0m \e[91mYours Truly, iPmartNetwork\e[0m'
      # additional commands for Iran side
     sudo systemctl daemon-reload
     sudo systemctl enable ipmartfrps
@@ -1955,7 +1955,7 @@ use_compression = true
 EOL
     done
 
-    display_checkmark $'\e[92mKharej configuration generated. Yours Truly, Azumi.\e[0m'
+    display_checkmark $'\e[92mKharej configuration generated. Yours Truly, iPmartNetwork.\e[0m'
 # Add the service section for Kharej
     cat > /etc/systemd/system/ipmartfrpc.service <<EOL
 [Unit]
@@ -2028,7 +2028,7 @@ use_compression = true
 
 EOL
 
-    display_checkmark $'\e[92mIran configuration generated. Yours Truly, Azumi.\e[0m'
+    display_checkmark $'\e[92mIran configuration generated. Yours Truly, iPmartNetwork.\e[0m'
 # Add the service section for Kharej
     cat > /etc/systemd/system/ipmartfrps.service <<EOL
 [Unit]
@@ -2466,7 +2466,7 @@ use_compression = true
 EOL
     done
 
-    display_checkmark $'\e[92mKharej configuration generated. Yours Truly, Azumi.\e[0m'
+    display_checkmark $'\e[92mKharej configuration generated. Yours Truly, iPmartNetwork.\e[0m'
 # Add the service section for Kharej
     cat > /etc/systemd/system/ipmartkcpc.service <<EOL
 [Unit]
@@ -2540,7 +2540,7 @@ use_compression = true
 
 EOL
 
-    display_checkmark $'\e[92mIran configuration generated. Yours Truly, Azumi.\e[0m'
+    display_checkmark $'\e[92mIran configuration generated. Yours Truly, iPmartNetwork.\e[0m'
 # Add the service section for Kharej
     cat > /etc/systemd/system/ipmartkcps.service <<EOL
 [Unit]
@@ -2655,7 +2655,7 @@ use_compression = true
 EOL
     done
 
-    display_checkmark $'\e[92mKharej configuration generated. Yours Truly, Azumi.\e[0m'
+    display_checkmark $'\e[92mKharej configuration generated. Yours Truly, iPmartNetwork.\e[0m'
 # Add the service section for Kharej
     cat > /etc/systemd/system/ipmartquicc.service <<EOL
 [Unit]
