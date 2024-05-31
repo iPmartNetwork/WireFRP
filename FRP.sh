@@ -2761,9 +2761,9 @@ function main_menu() {
   # Print the logo
   display_logo
   echo -e "\e[93m╔════════════════════════════════════════════════════════════════╗\e[0m"  
-  echo -e "\e[93m║                       \e[95mMain Menu\e[93m                    ║\e[0m"   
+  echo -e "\e[93m║                       \e[95m         Menu\e[93m                    ║\e[0m"   
   echo -e "\e[93m╠════════════════════════════════════════════════════════════════╣\e[0m" 
-  echo -e "\e[37m0. \e[91mStatus"
+  echo -e "\e[37m0. \e[96mStatus"
   echo -e "\e[37m1. \e[96mInstall FRP"
   echo -e "\e[37m2. \e[96mEdit Reset Timer"
   echo -e "\e[37m3. \e[96mFRP Simple UDP tunnel setup"
