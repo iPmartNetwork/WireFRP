@@ -652,7 +652,7 @@ function display_service_status() {
   if [[ $frps_status -eq 0 ]]; then
     frps_status_msg="\e[96m\xE2\x9C\x94 FRP Iran service is running\e[0m" 
   else
-    frps_status_msg="\e[35m\xE2\x9C\x98 FRP Iran service is not running\e[0m" 
+    frps_status_msg="\e[35m\xE2\x9C\x98  FRP Iran service is not running\e[0m" 
   fi
 
   # box
