@@ -956,7 +956,7 @@ timez() {
     echo -e "\033[93m───────────────────────────────────────\033[0m"
     echo -e '1. \033[93mHour \033[0m'
     echo -e '2. \033[92mMinutes \033[0m'
-    echo -e '0. \033[34mBack to main menu \033[0m'
+    echo -e '0. \033[34mBack to  \033[0m'
     echo -e "\033[93m───────────────────────────────────────\033[0m"
 
     while true; do
@@ -1880,7 +1880,7 @@ function multi_port() {
     echo "Select an option:"
     echo -e "1. \e[92mKharej Tunnel\e[0m"
     echo -e "2. \e[96mIran Tunnel\e[0m"
-    echo -e "3. \e[33mBack to main menu\e[0m"
+    echo -e "3. \e[33mBack to \e[0m"
     printf "\e[93m╰───────────────────────────────────────╯\e[0m\n"
     read -e -p "Enter your choice Please: " choice
 
@@ -2069,7 +2069,7 @@ function uni() {
     echo -e "1. \e[92mSimple UDP\e[0m"
     echo -e "2. \e[93mKCP + UDP\e[0m"
 	echo -e "3. \e[96mQuic + UDP\e[0m"
-    echo -e "4. \e[33mBack to main menu\e[0m"
+    echo -e "4. \e[33mBack to \e[0m"
     printf "\e[93m╰───────────────────────────────────────╯\e[0m\n"
     read -e -p "Enter your choice Please: " choice
 
@@ -2195,7 +2195,7 @@ status_menu() {
     echo -e '1. \033[92mSimple UDP  \033[0m'
     echo -e '2. \033[93mUDP + KCP\033[0m'
     echo -e '3. \033[96mUDP + Quic \033[0m'
-    echo -e '0. \033[94mBack to the main menu\033[0m'
+    echo -e '0. \033[94mBack to the \033[0m'
     echo -e "\033[93m╰───────────────────────────────────────╯\033[0m"
 
     while true; do
@@ -2391,7 +2391,7 @@ function Kcp_port() {
     echo "Select an option:"
     echo -e "1. \e[92mKharej Tunnel\e[0m"
     echo -e "2. \e[96mIran Tunnel\e[0m"
-    echo -e "3. \e[33mBack to main menu\e[0m"
+    echo -e "3. \e[33mBack to \e[0m"
     printf "\e[93m╰───────────────────────────────────────╯\e[0m\n"
     read -e -p "Enter your choice Please: " choice
 
@@ -2580,7 +2580,7 @@ function quic_port() {
     echo "Select an option:"
     echo -e "1. \e[92mKharej Tunnel\e[0m"
     echo -e "2. \e[96mIran Tunnel\e[0m"
-    echo -e "3. \e[33mBack to main menu\e[0m"
+    echo -e "3. \e[33mBack to \e[0m"
     printf "\e[93m╰───────────────────────────────────────╯\e[0m\n"
     read -e -p "Enter your choice Please: " choice
 
@@ -2761,7 +2761,7 @@ function main_menu() {
   # Print the logo
   display_logo
   echo -e "\e[93m╔════════════════════════════════════════════════════════════════╗\e[0m"  
-  echo -e "\e[93m║                       \e[95m         Menu\e[93m                    ║\e[0m"   
+  echo -e "\e[93m║                       \e[95m         Menu\e[93m                          ║\e[0m"   
   echo -e "\e[93m╠════════════════════════════════════════════════════════════════╣\e[0m" 
   echo -e "\e[37m0. \e[96mStatus"
   echo -e "\e[37m1. \e[96mInstall FRP"
