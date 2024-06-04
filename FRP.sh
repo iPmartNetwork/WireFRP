@@ -1088,7 +1088,7 @@ timerhour() {
     echo -e "\033[93m───────────────────────────────────────\033[0m"
     echo -e '1. \033[93mSimple UDP \033[0m'
     echo -e '2. \033[96mKCP + UDP\033[0m'
-	echo -e '3. \033[92mQuic + UDP\033[0m'
+    echo -e '3. \033[92mQuic + UDP\033[0m'
     echo -e '0. \033[34mBack to previous  \033[0m'
     echo -e "\033[93m───────────────────────────────────────\033[0m"
 
@@ -1718,10 +1718,10 @@ echo $'2. \e[94mIRAN\e[0m'
   printf "\e[93m╰───────────────────────────────────────╯\e[0m\n"
 read -e -p $'\e[38;5;205mEnter your choice Please: \e[0m' server_type
 clear
-    echo $'\e[92m ^ ^\e[0m'
-    echo $'\e[92m(\e[91mO,O\e[92m)\e[0m'
-    echo $'\e[92m(   ) \e[93mKharej \e[0m'
-    echo $'\e[92m "-"\e[93m═════════════════════\e[0m'
+    echo $'\e[0m'
+    echo $'\e[0m'
+    echo $'\e[0m'
+    echo $'\e[93m═════════════════════\e[0m'
 if [[ $server_type == "1" ]]; then
  printf "\e[93m╭───────────────────────────────────────╮\e[0m\n"
     echo $'\e[93mSelect Kharej configuration type:\e[0m'
@@ -1806,10 +1806,10 @@ WantedBy=multi-user.target" | sudo tee /etc/systemd/system/ipmartfrpc.service &>
     display_loading
   elif [[ $server_type == "2" ]]; then
   clear
-      echo $'\e[92m ^ ^\e[0m'
-    echo $'\e[92m(\e[91mO,O\e[92m)\e[0m'
-    echo $'\e[92m(   ) \e[93mIran \e[0m'
-    echo $'\e[92m "-"\e[93m═════════════════════\e[0m'
+      echo $'\e[0m'
+    echo $'\e[0m'
+    echo $'\e[93mIran \e[0m'
+    echo $'\e[93m═════════════════════\e[0m'
     # Iran configuration
      printf "\e[93m╭───────────────────────────────────────────────╮\e[0m\n"
     read -e -p $'\e[33mEnter \e[92mtunnel\e[33m port [Same port : 443]: \e[0m' bind_port
