@@ -7,7 +7,7 @@
 
 <p align="center">
 <h1 align="center"/>WireGuard FRP Tunnel</h1>
-<h6 align="center">تانن اف ار وایرگارد <h6>
+<h6 align="center">تانن اف ار پی وایرگارد <h6>
 </p>
 
 
