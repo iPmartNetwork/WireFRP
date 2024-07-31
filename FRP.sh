@@ -976,7 +976,6 @@ timez() {
 
 timermins() {
     clear
-    echo -e '\033[0m'
     echo -e '\033[92m)\033[0m'
     echo -e '\033[96mReset Timer based on minutes\033[0m'
     echo -e '\033[93m════════════════════════════════════\033[0m'
