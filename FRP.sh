@@ -1,8 +1,9 @@
 #!/bin/bash
 #
-#
-#
 # FRP Wireguard Tunnel 
+# Author: github.com/Azumi67
+# Update : github.com/ipmartnetwork
+# Special thanks to github.com/opiran-club as always.
 # Source: github.com/fatedier/frp
 #
 # This script is designed to simplify the installation and configuration of a
@@ -952,7 +953,7 @@ timez() {
     echo -e '\033[92m)\033[0m'
     echo -e '\033[96mReset Timer\033[0m'
     echo -e '\033[93m════════════════════════════════════\033[0m'
-    echo -e '\033[93m───────────────────────────────────────\033[0m"
+    echo -e "\033[93m───────────────────────────────────────\033[0m"
     echo -e '1. \033[93mHour \033[0m'
     echo -e '2. \033[92mMinutes \033[0m'
     echo -e '0. \033[34mBack to  \033[0m'
@@ -978,6 +979,7 @@ timez() {
 
 timermins() {
     clear
+    echo -e '\033[0m'
     echo -e '\033[92m)\033[0m'
     echo -e '\033[96mReset Timer based on minutes\033[0m'
     echo -e '\033[93m════════════════════════════════════\033[0m'
@@ -1206,7 +1208,7 @@ res_li() {
 pids=$(pgrep frps)
 kill -9 $pids
 systemctl daemon-reload
-systemctl restart ipmartfrps
+systemctl restart azumifrps
 sudo journalctl --vacuum-size=1M
 EOF
 
@@ -1276,7 +1278,7 @@ res_lk() {
 pids=$(pgrep frpc)
 kill -9 $pids
 systemctl daemon-reload
-systemctl restart ipmartfrpc
+systemctl restart azumifrpc
 sudo journalctl --vacuum-size=1M
 EOF
 
@@ -1346,7 +1348,7 @@ res_kcpk() {
 pids=$(pgrep frpc)
 kill -9 $pids
 systemctl daemon-reload
-systemctl restart ipmartkcpc
+systemctl restart azumikcpc
 sudo journalctl --vacuum-size=1M
 EOF
 
@@ -1416,7 +1418,7 @@ res_kcpi() {
 pids=$(pgrep frps)
 kill -9 $pids
 systemctl daemon-reload
-systemctl restart ipmartkcps
+systemctl restart azumikcps
 sudo journalctl --vacuum-size=1M
 EOF
 
@@ -1486,7 +1488,7 @@ res_quick() {
 pids=$(pgrep frpc)
 kill -9 $pids
 systemctl daemon-reload
-systemctl restart ipmartquicc
+systemctl restart azumiquicc
 sudo journalctl --vacuum-size=1M
 EOF
 
@@ -1556,7 +1558,7 @@ res_quici() {
 pids=$(pgrep frps)
 kill -9 $pids
 systemctl daemon-reload
-systemctl restart ipmartquics
+systemctl restart azumiquics
 sudo journalctl --vacuum-size=1M
 EOF
 
@@ -1756,8 +1758,8 @@ if [[ $server_type == "1" ]]; then
 	
 
     # frpc.ini 
-rm frp_0.59.0_linux_amd64/frpc.ini >/dev/null 2>&1
-rm frp_0.59.0_linux_arm64/frpc.ini >/dev/null 2>&1
+rm frp_0.58.1_linux_amd64/frpc.ini >/dev/null 2>&1
+rm frp_0.58.1_linux_arm64/frpc.ini >/dev/null 2>&1
 # CPU architecture
 if [[ "$(uname -m)" == "x86_64" ]]; then
   cpu_arch="amd64"
@@ -1770,7 +1772,7 @@ fi
     echo "[common]
 server_addr = $server_addr
 server_port = $server_port
-token = ipmart
+token = azumichwan
 
 [wireguard]
 type = udp
@@ -1828,7 +1830,7 @@ else
 fi
     echo "[common]
 bind_port = $bind_port
-token = ipmart
+token = azumichwan
 
 [wireguard]
 type = udp
@@ -1914,8 +1916,8 @@ function kharej_tunnel_() {
     read -e -p $'\e[93mEnter \e[92mTunnel\e[93m Port:[Example: 443] \e[0m' tunnel_port
    
 # frpc.ini 
-rm frp_0.59.0_linux_amd64/frpc.ini >/dev/null 2>&1
-rm frp_0.59.0_linux_arm64/frpc.ini >/dev/null 2>&1
+rm frp_0.58.1_linux_amd64/frpc.ini >/dev/null 2>&1
+rm frp_0.58.1_linux_arm64/frpc.ini >/dev/null 2>&1
 # CPU architecture
 if [[ "$(uname -m)" == "x86_64" ]]; then
   cpu_arch="amd64"
@@ -1925,12 +1927,12 @@ else
   echo -e "\e[93mUnsupported CPU architecture.\e[0m"
   exit 1
 fi
-    cat > frp_0.59.0_linux_$cpu_arch/frpc.ini <<EOL
+    cat > frp_0.58.1_linux_$cpu_arch/frpc.ini <<EOL
 [common]
 server_addr = $iran_ipv6
 server_port = $tunnel_port
 authentication_mode = token
-token = ipmart
+token = azumichwan
 
 EOL
 
@@ -1994,8 +1996,8 @@ function iran_tunnel_() {
     
     echo -e "\e[93mGenerating config for you...\e[0m"
     #frps.ini
-rm frp_0.59.0_linux_amd64/frps.ini >/dev/null 2>&1
-rm frp_0.59.0_linux_arm64/frps.ini >/dev/null 2>&1
+rm frp_0.58.1_linux_amd64/frps.ini >/dev/null 2>&1
+rm frp_0.58.1_linux_arm64/frps.ini >/dev/null 2>&1
 # CPU architecture
 if [[ "$(uname -m)" == "x86_64" ]]; then
   cpu_arch="amd64"
@@ -2008,14 +2010,14 @@ fi
     cat > frp_0.59.0_linux_$cpu_arch/frps.ini <<EOL
 [common]
 bind_port = $tunnel_port
-token = ipmart
+token = azumichwan
 
 EOL
         read -e -p $'\e[93mEnter \e[92mKharej\e[93m port Range:\e[0m\e[92m[example : 50820,50821,50822]\e[0m ' kharej_wireguard_port
         read -e -p $'\e[93mEnter \e[92mIran\e[93m port Range:\e[0m\e[92m[example : 50823,50824,50825]\e[0m ' iran_wireguard_port
   printf "\e[93m──────────────────────────────────────────────────\e[0m\n"
     
-        cat >> frp_0.59.0_linux_$cpu_arch/frps.ini <<EOL
+        cat >> frp_0.58.1_linux_$cpu_arch/frps.ini <<EOL
 [wireguard$i]
 type = udp
 local_ip = 127.0.0.1
@@ -2100,9 +2102,9 @@ q_() {
   sudo rm -rf frp_0.59.0_linux_amd64 &>/dev/null
   sudo rm -rf frp_0.59.0_linux_arm64 &>/dev/null
 
-  sudo systemctl stop ipmartquicc.service &>/dev/null
-  sudo systemctl disable ipmartquicc.service &>/dev/null
-  sudo rm /etc/systemd/system/ipmartquicc.service &>/dev/null
+  sudo systemctl stop azumiquicc.service &>/dev/null
+  sudo systemctl disable azumiquicc.service &>/dev/null
+  sudo rm /etc/systemd/system/azumiquicc.service &>/dev/null
 
   sudo systemctl stop ipmartquics.service &>/dev/null
   sudo systemctl disable ipmartquics.service &>/dev/null
@@ -2451,7 +2453,7 @@ EOL
         read -e -p $'\e[93mEnter \e[92mIran\e[93m port:\e[0m\e[92m[your new Config port]\e[0m ' iran_port
  printf "\e[93m──────────────────────────────────────────────────\e[0m\n"
     
-        cat >> frp_0.59.0_linux_$cpu_arch/frpck.toml <<EOL
+        cat >> frp_0.58.1_linux_$cpu_arch/frpck.toml <<EOL
 
 [wireguard$i]
 type = udp
@@ -2694,8 +2696,8 @@ function iran_quic_menu() {
     
     echo -e "\e[93mGenerating config for you...\e[0m"
     #frps.ini
-rm frp_0.59.0_linux_amd64/frpsq.toml >/dev/null 2>&1
-rm frp_0.59.0_linux_arm64/frpsq.toml >/dev/null 2>&1
+rm frp_0.59_linux_amd64/frpsq.toml >/dev/null 2>&1
+rm frp_0.59_linux_arm64/frpsq.toml >/dev/null 2>&1
 # CPU architecture
 if [[ "$(uname -m)" == "x86_64" ]]; then
   cpu_arch="amd64"
@@ -2716,7 +2718,7 @@ EOL
         read -e -p $'\e[93mEnter \e[92mIran\e[93m port Range:\e[0m\e[92m[example : 50823,50824]\e[0m ' iran_wireguard_port
   printf "\e[93m──────────────────────────────────────────────────\e[0m\n"
     
-        cat >> frp_0.59.0_linux_$cpu_arch/frpsq.toml <<EOL
+        cat >> frp_0.58.1_linux_$cpu_arch/frpsq.toml <<EOL
 [wireguard$i]
 type = udp
 local_ip = 127.0.0.1
@@ -2802,7 +2804,7 @@ function main_menu() {
     8)
       restart_service
       ;;
-    9)
+    0)
       exit 0
       ;;
     *)
