@@ -1,9 +1,6 @@
 #!/bin/bash
 #
 # FRP Wireguard Tunnel 
-# Author: github.com/Azumi67
-# Update : github.com/ipmartnetwork
-# Special thanks to github.com/opiran-club as always.
 # Source: github.com/fatedier/frp
 #
 # This script is designed to simplify the installation and configuration of a
@@ -953,7 +950,7 @@ timez() {
     echo -e '\033[92m)\033[0m'
     echo -e '\033[96mReset Timer\033[0m'
     echo -e '\033[93m════════════════════════════════════\033[0m'
-    echo -e "\033[93m───────────────────────────────────────\033[0m"
+    echo -e '\033[93m───────────────────────────────────────\033[0m"
     echo -e '1. \033[93mHour \033[0m'
     echo -e '2. \033[92mMinutes \033[0m'
     echo -e '0. \033[34mBack to  \033[0m'
@@ -1649,10 +1646,10 @@ ipv4_forwarding=$(sysctl -n net.ipv4.ip_forward)
     # cpu architecture
     case $arch in
         x86_64 | amd64)
-            frp_download_url="https://github.com/iPmartNetwork/WireFRP/releases/download/v0.58.1/frp_0.58.1_linux_amd64.tar.gz"
+            frp_download_url="https://github.com/iPmartNetwork/WireFRP/releases/download/v0.59.0/frp_0.59.0_linux_amd64.tar.gz"
             ;;
         aarch64 | arm64)
-            frp_download_url="https://github.com/iPmartNetwork/WireFRP/releases/download/v0.58.1/frp_0.58.1_linux_arm64.tar.gz"
+            frp_download_url="https://github.com/iPmartNetwork/WireFRP/releases/download/v0.59.0/frp_0.59.0_linux_arm64.tar.gz"
             ;;
         *)
             display_error "Unsupported CPU architecture: $arch"
@@ -1772,7 +1769,7 @@ fi
     echo "[common]
 server_addr = $server_addr
 server_port = $server_port
-token = azumichwan
+token = ipmart
 
 [wireguard]
 type = udp
@@ -1830,7 +1827,7 @@ else
 fi
     echo "[common]
 bind_port = $bind_port
-token = azumichwan
+token = ipmart
 
 [wireguard]
 type = udp
@@ -1932,7 +1929,7 @@ fi
 server_addr = $iran_ipv6
 server_port = $tunnel_port
 authentication_mode = token
-token = azumichwan
+token = ipmart
 
 EOL
 
@@ -2010,7 +2007,7 @@ fi
     cat > frp_0.58.1_linux_$cpu_arch/frps.ini <<EOL
 [common]
 bind_port = $tunnel_port
-token = azumichwan
+token = ipmart
 
 EOL
         read -e -p $'\e[93mEnter \e[92mKharej\e[93m port Range:\e[0m\e[92m[example : 50820,50821,50822]\e[0m ' kharej_wireguard_port
